@@ -1,0 +1,97 @@
+<footer class="footer footer-2">
+    <div class="footer-middle">
+        <div [ngClass]="containerClass">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="widget widget-about">
+                        <a routerLink="/">
+                            <img src="assets/images/logo.png" class="footer-logo" alt="Footer Logo" width="104"
+                                height="24">
+                        </a>
+                        <p class="font-weight-normal">Praesent dapibus, neque id cursus ucibus, tortor neque egestas
+                            augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis,
+                            accumsan porttitor, facilisis luctus, metus. </p>
+
+                        <div class="widget-about-info">
+                            <div class="tel-number"><span class="widget-about-title">Got Question? Call us
+                                    24/7</span><a href="tel:123456789">+0123 456 789</a></div>
+                            <div class="payments-info"><span class="widget-about-title">Payment Method</span>
+                                <figure class="footer-payments"><img src="assets/images/payments.png"
+                                        alt="Payment methods" width="272" height="20"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <div class="widget">
+                        <h4 class="widget-title">Information</h4>
+
+                        <ul class="widget-list">
+                            <li><a routerLink="pages/about">About Molla</a></li>
+                            <li><a href="javascript:;">How to shop on Molla</a></li>
+                            <li><a routerLink="pages/contact">Contact us</a></li>
+                            <li><a routerLink="pages/login">Log in</a></li>
+                            <li><a routerLink="pages/faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <div class="widget">
+                        <h4 class="widget-title">Customer Service</h4>
+
+                        <ul class="widget-list">
+                            <li><a href="javascript:;">Payment Methods</a></li>
+                            <li><a href="javascript:;">Money-back guarantee!</a></li>
+                            <li><a href="javascript:;">Returns</a></li>
+                            <li><a href="javascript:;">Shipping</a></li>
+                            <li><a href="javascript:;">Terms and conditions</a></li>
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-lg-2">
+                    <div class="widget">
+                        <h4 class="widget-title">My Account</h4>
+
+                        <ul class="widget-list">
+                            <li><a routerLink="/shop/dashboard">Sign In</a></li>
+                            <li><a routerLink="/shop/cart">View Cart</a></li>
+                            <li><a routerLink="/shop/wishlist">My Wishlist</a></li>
+                            <li><a href="javascript:;">Track My Order</a></li>
+                            <li><a href="javascript:;">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div [ngClass]="containerClass">
+            <p class="footer-copyright font-weight-normal">Copyright © {{ year }} Molla Store. All Rights Reserved.</p>
+            <ul class="footer-menu">
+                <li><a href="javascript:;" class="font-weight-normal">Terms Of Use</a></li>
+                <li><a href="javascript:;" class="font-weight-normal">Privacy Policy</a></li>
+            </ul>
+
+            <div class="social-icons social-icons-color">
+                <span class="social-label font-weight-normal">Social Media</span>
+                <a href="javascript:;" class="social-icon social-facebook" title="Facebook"><i
+                        class="icon-facebook-f"></i></a>
+                <a href="javascript:;" class="social-icon social-twitter" title="Twitter"><i
+                        class="icon-twitter"></i></a>
+                <a href="javascript:;" class="social-icon social-instagram" title="Instagram"><i
+                        class="icon-instagram"></i></a>
+                <a href="javascript:;" class="social-icon social-youtube" title="Youtube"><i
+                        class="icon-youtube"></i></a>
+                <a href="javascript:;" class="social-icon social-pinterest" title="Pinterest"><i
+                        class="icon-pinterest"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-10" *ngIf="isBottomSticky"></div>
+</footer>

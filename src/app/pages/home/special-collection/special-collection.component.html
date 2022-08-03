@@ -1,0 +1,22 @@
+<div class="container-fluid special-collection">
+    <ul ngbNav #nav="ngbNav" class="nav nav-pills nav-border-anim nav-big justify-content-center tab-content-carousel" [destroyOnHide]="false">
+         <li [ngbNavItem]="titles[attr]" *ngFor="let attr of attrs">
+            <a ngbNavLink>{{ titles[attr] }}</a>
+            <ng-template ngbNavContent>
+                <owl-carousel carouselClasses="owl-simple carousel-equal-height carousel-with-shadow"
+                    [options]="sliderOption" *ngIf="!loaded else loadedBlock">
+                    <div class="skel-pro" *ngFor="let i of [1,2,3,4,5,6]"></div>
+                </owl-carousel>
+                <ng-template #loadedBlock>
+                    <owl-carousel id="products-carousel"
+                        carouselClasses="owl-simple carousel-equal-height carousel-with-shadow"
+                        [options]="sliderOption">
+                        <molla-product-twelve [product]="product" *ngFor="let product of products | attrFilter : attr">
+                        </molla-product-twelve>
+                    </owl-carousel>
+                </ng-template>
+            </ng-template>
+        </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+</div>

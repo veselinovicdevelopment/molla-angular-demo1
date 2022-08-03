@@ -1,0 +1,9 @@
+<div class="wishlist">
+    <a routerLink="/shop/wishlist">
+        <div class="icon">
+            <i class="icon-heart-o"></i>
+            <span class="wishlist-count">{{ wishlistService.wishlistQty | async }}</span>
+        </div>
+        <p>Wishlist</p>
+    </a>
+</div>

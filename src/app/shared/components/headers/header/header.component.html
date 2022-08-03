@@ -1,0 +1,98 @@
+<header class="header header-intro-clearance header-1">
+    <div class="header-top">
+        <div [class]="containerClass">
+            <div class="header-left overflow-hidden mr-3 mr-sm-0">
+                <div class="welcome-msg d-flex flex-nowrap">
+                    <p>Special collection already available.</p>
+                    <a href="javascript:;">&nbsp;Read more ...</a>
+                </div>
+            </div>
+
+            <div class="header-right">
+
+                <ul class="top-menu">
+                    <li>
+                        <a href="javascript:;">Links</a>
+                        <ul>
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="javascript:;">USD</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="javascript:;">Eur</a></li>
+                                            <li><a href="javascript:;">Usd</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="header-dropdown">
+                                    <a href="javascript:;">English</a>
+                                    <div class="header-menu">
+                                        <ul>
+                                            <li><a href="javascript:;">English</a></li>
+                                            <li><a href="javascript:;">French</a></li>
+                                            <li><a href="javascript:;">Spanish</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="login"><a href="javascript:;" (click)="showLoginModal($event)">Sign in / Sign
+                                    up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-middle">
+        <div [class]="containerClass">
+            <div class="header-left">
+                <molla-mobile-button></molla-mobile-button>
+
+                <a routerLink="/" class="logo">
+                    <img src="assets/images/logo.png" alt="Molla Logo" width="104" height="27">
+                </a>
+            </div>
+
+            <div class="header-center">
+                <molla-header-search style="width: 100%;"></molla-header-search>
+            </div>
+
+            <div class="header-right">
+                <div class="account">
+                    <a routerLink="/shop/dashboard" title="My account">
+                        <div class="icon">
+                            <i class="icon-user"></i>
+                        </div>
+                        <p>Account</p>
+                    </a>
+                </div>
+
+                <molla-wishlist-menu></molla-wishlist-menu>
+
+                <molla-cart-menu></molla-cart-menu>
+            </div>
+        </div>
+    </div>
+
+    <div class="sticky-wrapper" [style.height]="utilsService.isSticky? utilsService.stickyHeight + 'px' : '' ">
+        <div class="header-bottom sticky-header" [class.fixed]="utilsService.isSticky">
+            <div [ngClass]="containerClass">
+                <div class="header-left">
+                    <molla-category-menu style="display: contents;"></molla-category-menu>
+                </div>
+
+                <div class="header-center">
+                    <molla-main-menu></molla-main-menu>
+                </div>
+
+                <div class="header-right">
+                    <i class="icon-medapps"></i>
+                    <p>Clearance<span class="highlight">&nbsp;Up to 30% Off</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

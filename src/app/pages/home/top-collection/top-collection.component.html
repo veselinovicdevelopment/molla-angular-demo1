@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="heading heading-center">
+        <h2 class="title" contentAnim aniName="blurIn">Top Selling Products</h2>
+    </div>
+
+    <ul ngbNav #nav="ngbNav" class="nav nav-pills nav-border-anim justify-content-center">
+        <li [ngbNavItem]="titles[cat[0]]" *ngFor="let cat of categories">
+            <a ngbNavLink>{{ titles[cat[0]] }}</a>
+            <ng-template ngbNavContent>
+                <div class="products">
+                    <div class="row justify-content-center" *ngIf="!loaded else loadedBlock">
+                        <div class="skel-pro col-6 col-md-4 col-lg-3 col-xl-5col"
+                            *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]">
+                        </div>
+                    </div>
+                    <ng-template #loadedBlock>
+                        <div class="row justify-content-center">
+                            <molla-product-twelve class="col-6 col-md-4 col-lg-3 col-xl-5col" [product]="product"
+                                *ngFor="let product of products | catFilter : cat">
+                            </molla-product-twelve>
+                        </div>
+                    </ng-template>
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+</div>
